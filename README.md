@@ -73,14 +73,13 @@ This enterprise chat application is designed to revolutionize business communica
 
 - Python 3.11+
 - PostgreSQL database
-- Redis (optional, for caching and rate limiting)
 
 ## Installation
 
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/coralcoffee/chat
 cd chat
 ```
 
@@ -104,31 +103,6 @@ source .venv/bin/activate
 
 ```bash
 pip install .
-```
-
-### 4. Environment Configuration
-
-Create a `.env` file in the root directory:
-
-```env
-APP_ENV=dev
-APP_JWT_SECRET=your-secret-key-here
-APP_DATABASE_URL=postgresql+asyncpg://postgres:password@localhost:5432/chat_db
-APP_ENABLE_PROMETHEUS=false
-```
-
-### 5. Database Setup
-
-Make sure PostgreSQL is running, then create the database:
-
-```bash
-createdb chat_db
-```
-
-Run database migrations:
-
-```bash
-alembic upgrade head
 ```
 
 ## Running the Application
